@@ -1,4 +1,4 @@
-import mysql.connect
+import mysql.connector
 import questionary
 from abc import abstractclassmethod, ABC
 
@@ -11,13 +11,13 @@ class ConectBD:
         if cls._inst is None:
             cls._inst = super().__new__(cls)
             cls._inst.conect = mysql.connector.connect(
-                host="localhost"T,
-                user="root",
-                password="root123",
-                database="libra_tech",
+                host="localhost",
+                user="user",
+                password="user123",
+                database="mysqlDatabase",
                 port=3307
             )
-            cls._inst.cursor = cls._inst.conect.cusor()
+            cls._inst.cursor = cls._inst.conect.cursor()
         return cls._inst
     
     def get_cursor(self):
@@ -27,7 +27,7 @@ class ConectBD:
     def close(self):
         self._inst.cursor.close()
         self._inst.conect.close()
-        import BDConect as bdc
+    
 
 #metodo factory para diferentes ações
 class Action(ABC):
@@ -67,7 +67,7 @@ class RegistrarUser(Action):
 
         try:
             cursor.execute(
-                'INSERT INTO users (name, email, phone) VALUES (%s, %s, %s)'
+                'INSERT INTO users (name, email, phone) VALUES (%s, %s, %s)',
                 (nomeUser, emailUser, telUser)
             )
             db.commit()
