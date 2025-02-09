@@ -11,10 +11,10 @@ class ConectBD:
             try:
                 cls._inst = super().__new__(cls)
                 cls._inst.conect = mysql.connector.connect(
-                    host="localhost",
-                    user="user",
-                    password="user123",
-                    database="mysqlDatabase",
+                    host="127.0.0.1",
+                    user="root",
+                    password="root123",
+                    database="libra_tech",
                     port=3307
                 )
                 cls._inst.cursor = cls._inst.conect.cursor()
