@@ -1,5 +1,5 @@
 from Database.Conection import DatabaseConnection
-from base import Action
+from Actions.base import Action
 
 class ExitSystem(Action):
     def execute(self):

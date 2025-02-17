@@ -1,4 +1,4 @@
-from base import Action
+from Actions.base import Action
 from Database.Conection import DatabaseConnection
 import mysql.connector
 

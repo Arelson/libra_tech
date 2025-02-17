@@ -1,4 +1,4 @@
-from base import SearchStrategy
+from Book.Search.base import SearchStrategy
 
 class BookSearch:
     def __init__(self, strategy: SearchStrategy):

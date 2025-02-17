@@ -1,4 +1,4 @@
-from base import SearchStrategy
+from Book.Search.bookSearch import SearchStrategy
 import questionary
 
 class buscaPorCategoria(SearchStrategy):
