@@ -1,7 +1,7 @@
 -- criar banco de dados para o LibraTech
-CREATE DATABASE libra_tech;
+CREATE DATABASE mysqlDatabase;
 
-USE libra_tech;
+USE mysqlDatabase;
 -- criar tabela de livros
 CREATE TABLE IF NOT EXISTS books (
     id INT PRIMARY KEY AUTO_INCREMENT,
